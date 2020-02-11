@@ -6,4 +6,15 @@
 <div class="cover-container d-flex">
         <h1 class="cover-heading">{{ controller_name }}!</h1>
 </div>
+<wrapper class="example">
+{% for book in books %}
+        <div class="card" style="width: 18rem; margin-bottom:20px;">
+            <div class="card-body">
+                <h5 class="card-title">Title: {{ book.title }}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Price: &euro;{{ book.price }}</h6>
+                <p class="card-text">Author: {{ book.author }}</p>
+            </div>
+        </div>
+    {% endfor %}
+</wrapper>
 {% endblock %}
