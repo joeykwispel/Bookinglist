@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+<div class="example-wrapper">
+    <h1>{{ controller_title }}!</h1>
+</div>
+<h2 class="cover-heading">Books</h2>
+<wrapper class="example justify-content-center row">
+
+{% for book in books %}
+        <div class="card" style="width: 18rem; margin-bottom:20px; margin-left:20px;">
+            <div class="card-body">
+                <h5 class="card-title">Title: {{ book.title }}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Price: &euro;{{ book.price }}</h6>
+                <p class="card-text">Author: {{ book.author }}</p>
+            </div>
+        </div>
+    {% endfor %}
+</wrapper>
+{% endblock %}
+
+
+{# <h2 class="cover-heading">Reviews</h2>
+<wrapper class="example justify-content-center row">
+        {# {% for review in reviews %}
+                <div class="card" style="width: 18rem; margin-bottom:20px; margin-left:20px;">
+                <div class="card-body">
+                        <p class="card-title">Desc: {{ review.description }}</p>
+                        <p class="card-subtitle text-muted">Name: {{ review.name }}</p>
+                        <p class="card-title text-muted">Title: {{ review.book.title }}</p>
+                </div>
+        </div>
+        {% endfor %}
+</wrapper> #}
